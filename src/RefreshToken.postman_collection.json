@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "04855f24-b0c9-4686-8a91-6dbca28c841e",
+		"name": "RefreshToken",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26478093"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/products/signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aaru\",\r\n    \"email\":\"raj@gmail.com\",\r\n    \"password\":\"pwd1\",\r\n    \"roles\":\"ROLE_ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/products/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Aaru\",\r\n    \"password\":\"pwd1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/products/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Aaru\",\r\n    \"password\":\"pwd1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Jan 2024 11:34:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXJ1IiwiaWF0IjoxNzA1NTc3NjY2LCJleHAiOjE3MDU1Nzk0NjZ9.ZQrnbG-iiXVREvjgTemrT3UN1fDS-Jiwrs9xkIlHkvI\",\n    \"token\": \"8a415253-d875-448a-bb21-526bcde67ff6\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/products/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXJ1IiwiaWF0IjoxNzA1NTc4NTc1LCJleHAiOjE3MDU1Nzg2MzV9.uxsvSFOHQLWAByv_ovdS-5LZX24tjut3-h-wzZrzdHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/products/refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"d282b34a-30d7-449a-8068-fc300d43c6c8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/refreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"refreshToken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/products/refreshToken",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"d282b34a-30d7-449a-8068-fc300d43c6c8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/refreshToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"refreshToken"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Jan 2024 11:49:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBYXJ1IiwiaWF0IjoxNzA1NTc4NTc1LCJleHAiOjE3MDU1Nzg2MzV9.uxsvSFOHQLWAByv_ovdS-5LZX24tjut3-h-wzZrzdHw\",\n    \"token\": \"d282b34a-30d7-449a-8068-fc300d43c6c8\"\n}"
+				}
+			]
+		}
+	]
+}
